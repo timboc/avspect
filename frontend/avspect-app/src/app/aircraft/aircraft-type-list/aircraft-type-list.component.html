@@ -1,7 +1,6 @@
 <div>
   <p ng-if="errorMessage">{{errorMessage}}</p>
-  <p> First aircraft is {{aircraftTypes[0].name}} </p>
-  <ul>
-    <li *ngFor="let aircraftType of aircraftTypes">{{aircraftType.name}} by {{aircraftType.vendor}}</li>
+  <ul ng-if="aircraftTypes.length">
+    <li  ng-if="aircraftTypes.length" *ngFor="let aircraftType of aircraftTypes">{{aircraftType.name}} by {{aircraftType.vendor}}</li>
   </ul>
 </div>

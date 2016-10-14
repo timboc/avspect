@@ -9,11 +9,7 @@ import { AircraftTypeService } from '../shared/aircraft-type.service'
 })
 export class AircraftTypeListComponent implements OnInit {
 
-  aircraftTypes : IAircraftType[] = [
-        { "name": "747", "vendor" : "Boeing" },
-        { "name": "747-300", "vendor" : "Boeing" },
-        { "name": "A380", "vendor" : "Airbus"}
-      ];
+  aircraftTypes : IAircraftType[] = [];
   initialised : boolean = false;
   errorMessage : string;
 

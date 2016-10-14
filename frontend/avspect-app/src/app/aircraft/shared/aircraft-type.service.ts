@@ -6,14 +6,14 @@ import {IAircraftType} from './aircraft-type.model';
 
 @Injectable()
 export class AircraftTypeService {
-  url : string = 'http://localhost:1234';
+  url : string = 'http://localhost:5000';
 
   constructor(private http : Http) { }
 
   get() : Observable<IAircraftType[]> {
 
     return this.http
-        .get("app/aircraft/shared/data/aircraft-types.json")
+        .get(this.url + '/api/aircrafttypes')
         .map((res : Response) => <IAircraftType[]>res.json())        
   }
 
